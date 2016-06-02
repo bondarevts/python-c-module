@@ -1,7 +1,5 @@
-all: spammodule.dylib
+all: spammodule.c
+	python3 setup.py build_ext --inplace
 
-spammodule.dylib: spammodule.c
-	gcc -dynamiclib spammodule.c -framework Python -o spammodule.dylib
-
-clear:
-	rm -f spammodule.dylib
+clean:
+	rm -rf *.so build
