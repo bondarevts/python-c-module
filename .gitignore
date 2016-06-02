@@ -1,2 +1,4 @@
 *.so
 build
+clinic
+clinic.py
