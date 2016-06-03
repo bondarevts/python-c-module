@@ -8,21 +8,20 @@ module spam
 #include "clinic/spammodule.c.h"
 
 /*[clinic input]
-spam.system
+spam.system -> long
 
-  statement: 's'
+  statement: str
     a statement string to run through the system call
   /
 
 Execute a shell command.
 [clinic start generated code]*/
 
-static PyObject *
+static long
 spam_system_impl(PyModuleDef *module, const char *statement)
-/*[clinic end generated code: output=abfb2f1f48e7f5a7 input=e4343d85b0fe35d6]*/
+/*[clinic end generated code: output=1d953f325800d2b9 input=33f3d682f1b97e1b]*/
 {
-    int sts = system(statement);
-    return PyLong_FromLong(sts);
+    return system(statement);
 }
 
 
